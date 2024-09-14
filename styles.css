@@ -76,7 +76,7 @@ p {
 }
 
 /* Link to resume and transcript */
-#resume a, #transcript a {
+#resume a, #transcript a, #strengths a {
     display: inline-block;
     padding: 10px 20px;
     background-color: #282c34;
@@ -86,7 +86,7 @@ p {
     margin-top: 10px;
 }
 
-#resume a:hover, #transcript a:hover {
+#resume a:hover, #transcript a:hover, #strengths a:hover {
     background-color: #50575e;
 }
 
