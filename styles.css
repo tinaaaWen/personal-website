@@ -136,3 +136,86 @@ footer {
     text-align: center;
     margin-top: 5px;
 }
+
+/* Timeline styling */
+.timeline {
+    position: relative;
+    width: 70%;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 10px 0;
+    border-left: 2px solid #007bff;
+    /* Adjust the left margin to avoid overlap with sidebar */
+    margin-left: calc(18% + 20px); 
+}
+
+.timeline-event {
+    position: relative;
+    margin: 40px 0;
+}
+
+.timeline-date {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #007bff;
+    text-align: right; /* Align the dates to the right side */
+    margin-right: 10px; /* Add some space between date and timeline line */
+}
+
+.timeline-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.point {
+    position: absolute;
+    left: -10px;
+    width: 20px;
+    height: 20px;
+    background-color: #007bff;
+    border-radius: 50%;
+    z-index: 1;
+    left: 50%; /* Move the point to the center */
+    transform: translateX(-50%);
+}
+
+.text {
+    width: 45%;
+    text-align: right; /* Align the text (date and location) to the right */
+    padding-right: 20px; /* Space between text and the point */
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.photo {
+    width: 45%;
+    padding-left: 20px; /* Space between the point and photo */
+}
+
+.travel-photo {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.caption {
+    text-align: center;
+    font-size: 0.9em;
+    margin-top: 5px;
+    color: #666;
+}
+
+/* Ensuring consistent alignment for timeline */
+.timeline-content .text {
+    order: -1; /* Always keep the text (dates) on the left side */
+}
+
+/* Ensure images are always on the right */
+.timeline-content .photo {
+    order: 1;
+}
